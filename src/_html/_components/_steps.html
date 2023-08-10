@@ -1,0 +1,42 @@
+<div class="{{stepsClass}} steps grid relative">
+  {% for item in data %}
+    <div class="steps__item d-flex columns align-center">
+      <div class="steps__box d-flex align-center justify-center round"
+        data-aos-anchor="#order"
+        data-aos="fade-right"
+        data-aos-offset="-300"
+        data-aos-delay="100"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <div class="steps__box-icon d-flex align-center justify-center round">
+          <img src="{{assetsPath}}/{{item.icon}}.svg" alt="{{item.name}}">
+        </div>
+      </div>
+      <div class="steps__name text-center color-white">
+        {{item.name}}
+      </div>
+    </div>
+  {% endfor %}
+  {% if dotsArray %}
+    <div class="steps__dotsbox absolute d-flex justify-center">
+      {% for dotsbox in dotsArray %}
+        <div class="steps__dots d-flex">
+          {% for dotsbox in [1,2,3,4,5] %}
+            <div class="steps__dot round"
+            data-aos="zoom-in"
+            data-aos-offset="0"
+            data-aos-delay="0"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

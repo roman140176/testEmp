@@ -1,0 +1,72 @@
+{% set stepsClass = 'order__steps' %}
+{% set assetsPath = 'assets/svg' %}
+{% set dotsArray = [1,2,3,4] %}
+{% set data = [
+  {name:'Lorem ipsum dolor sit amet',icon:'fl'},
+  {name:'Сonsecteturadipiscing elit',icon:'percent'},
+  {name:'Sed do eiusmod tempor',icon:'tepmor'},
+  {name:'Esse cillum dolore eu fugiat',icon:'mail'},
+  {name:'Excepteur sint occaecat cupidatat non proident',icon:'dollar'}
+  ] %}
+{% set selectData = [
+  {name:'Sed ut perspiciatis'},
+  {name:'Nemo enim ipsam'},
+  {name:'Et harum quidem'},
+  {name:'Temporibus autem'},
+  {name:'Windows'},
+  {name:'Linux'},
+  {name:'Unix'},
+  {name:'MacOs'},
+  {name:'Itaque earum rerum'}
+  ] %}
+<section class="order" id="order">
+  <div class="container">
+    <header class="order__head text-center">
+      <h1 class="order__title display-2 uppercase">
+        Оформление <span class="color-blue">Заказа</span>
+      </h1>
+      <p class="order__description color-lgr">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+    </header>
+    {% include "../_components/_steps.html" %}
+    <form action="" class="order__form">
+      <div class="order__form-box grid">
+        <div class="form-group">
+          <div class="select form-input relative d-flex align-center">
+            <div class="select__close absolute"></div>
+            <span class="select__name color-placeholder">Выберите тип системы</span>
+            <input type="hidden" name="system" id="system" value="">
+            <div id="system-drop" class="select__drop absolute bg-panel">
+              {% for select in selectData %}
+              <div class="select__drop-item color-white">
+                {{select.name}}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-input order__input" placeholder="Ваш e-mail" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-input order__input" placeholder="Ваше имя" id="name" name="name">
+        </div>
+        <div class="form-group span-2 d-flex columns justify-between">
+          <div class="form-group__header d-flex justify-between">
+            <div class="form-group__desc color-white">Sed ut perspiciatis, unde omnis iste natus</div>
+            <div class="form-group__percent color-white">75 %</div>
+          </div>
+          <input type="range" class="form-range order__range" id="percent" name="percent" value="75">
+        </div>
+        <div class="form-group">
+          <input type="file" class="order__input hidden" placeholder="Прикрепить файл" id="file" name="file">
+          <div class="file-input d-flex align-center justify-center uppercase relative">
+            <span>Прикрепить файл</span>
+          </div>
+        </div>
+        <div class="order__form-group form-group span-3 d-flex justify-center">
+          <button type="submit" class="btn btn--large btn-accent">Отправить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+.btn{
+  width: 9.531vw;
+  height: 2.240vw;
+  font-size: 0.677vw;
+  text-transform: uppercase;
+  border-radius: 0.208vw;
+  border-width: 0.052vw;
+  border-style: solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  cursor: pointer;
+  transition: all .3s;
+  @media (max-width:1366px){
+    height: 2.8vw;
+    width: 11vw;
+    font-size: 0.977vw;
+  }
+  @media (max-width:1200px){
+    height: 3.8vw;
+    width: 13vw;
+    font-size: 1.1vw;
+  }
+  @media (max-width:767px){
+    height: 5vw;
+    width: 25vw;
+    font-size: 1.8vw;
+  }
+  @media (max-width:520px){
+    height: 9.231vw;
+    width: 100vw;
+    font-size: 3vw;
+  }
+  &--large{
+    width: 19.271vw;
+    height: 2.500vw;
+    font-size: 0.781vw;
+    font-weight: 600;
+    @media (max-width:1366px) {
+        height: 3vw;
+        font-size: 1vw;
+        line-height: 3vw;
+      }
+    @media (max-width:1200px){
+      height: 4vw;
+      width: 30.833vw;
+      font-size: 1.5vw;
+      line-height: 4vw;
+    }
+    @media (max-width:767px) {
+      height: 6.258vw;
+      font-size: 2vw;
+    }
+    @media (max-width:520px) {
+      height: 9.231vw;
+      font-size: 3vw;
+    }
+  }
+  &-accent{
+    background-color: $blue;
+    color: $white;
+    border-color: $white;   
+    
+    &:hover{
+      background-color: darken($blue, 10%);
+      box-shadow: 0 0 1.563vw rgba($blue, .4);
+    }
+  }
+  &-light{
+    background-color: $white;
+    color: $buttonColor;
+    border-color: $buttonDarkBorder;   
+    &:hover{
+      box-shadow: 0 0 1.563vw rgba($blue, .6);
+      border-color: darken($blue, 10%);
+      color: darken($blue, 10%);
+    } 
+  }
+}

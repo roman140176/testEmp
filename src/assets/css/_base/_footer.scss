@@ -1,0 +1,91 @@
+.footer{
+  height: 4.167vw;
+  background-color: $panelColor;
+  color: $white;
+  font-size: 0.677vw;
+  @media (max-width:1480px){
+    font-size: .8vw;
+  }
+  @media (max-width:1200px){
+    font-size: 1.2vw;
+  }
+  @media (max-width:991px){
+    height: 6vw;
+    font-size: 1.5vw;
+  }
+  @media (max-width:991px){    
+    font-size: 1.8vw;
+  }
+  @media (max-width:520px){    
+    height: 8vw;
+  }
+  &__payments{
+    border-right: 0.052vw solid $payNamesColor;
+    border-left: 0.052vw solid $payNamesColor;
+    padding-left: 2.188vw;
+    padding-right: 2.188vw;
+    @media (max-width:1480px) {
+        border-right: 0;
+        border-left: 0;
+        padding-left: .2vw;
+        padding-right: .2vw;
+      }
+  }
+  &__payment{
+    &:not(:last-child){
+      margin-right: 1.979vw;
+    }
+    &-name{
+      color: $payNamesColor;
+      @media (max-width:991px){
+        display: none;
+      }
+    }
+    &-icon{
+      margin-right: 0.521vw;
+      img {
+          @media (min-width:1921px) {
+            min-width: 1.042vw;
+          }
+          @media (max-width:767px) {
+          max-width: 2.086vw;
+        }
+        }
+    }
+  }
+  &__links{
+    &-icon{
+      margin-right: 0.521vw;
+      width: 1.042vw;
+      height: 1.042vw;
+      @media (max-width:1200px) {
+          margin-right: 1vw;
+        }
+      img{
+        @media (min-width:1921px) {
+          min-width: 0.833vw;
+        }
+        @media (max-width:1200px) {
+          min-width: 16px;
+        }
+        @media (max-width:767px) {
+          min-width: 2.086vw;
+        }
+      }
+    }
+    &-item{
+      @media (max-width:1200px) {
+        .footer__links-icon{
+            position: relative;
+            top: -3px;
+          }
+        }
+      &:not(:last-child) {
+          margin-right: 1.979vw;
+        .footer__links-icon {
+            top: 0;
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{% set payments = [
+  {name:'Qiwi wallet',icon:'qiwi'},
+  {name:'Yandex Money',icon:'ym'},
+  {name:'Web Money',icon:'wm'}
+  ] %}
+{% set links = [
+  {name:'info@ipsum228.com',icon:'smail'},
+  {name:'Мы вконтакте',icon:'vk'}
+  ] %}
+<footer class="footer">
+  <div class="container d-flex height-full align-center justify-between">
+    <div class="footer__copy">© 2018 «LoremIpsum.net» Все права защищены.</div>
+    <div class="footer__payments d-flex">
+      {% for payment in payments %}
+        <div class="footer__payment d-flex align-center relative">
+          <div class="footer__payment-icon">
+            <img src="/assets/svg/{{payment.icon}}.svg" alt="{{payment.name}}">
+          </div>
+          <div class="footer__payment-name">{{payment.name}}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="footer__links d-flex">
+      {% for link in links %}
+      <a href="#" class="footer__links-item d-flex align-center">
+        <div class="footer__links-icon d-flex align-center justify-center">
+          <img src="/assets/svg/{{link.icon}}.svg" alt="{{link.name}}">
+        </div>
+        <div class="footer__links-name">{{link.name}}</div>
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</footer>

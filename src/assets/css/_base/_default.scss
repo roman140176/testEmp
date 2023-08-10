@@ -1,0 +1,122 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    // min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: normal;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+a{
+    text-decoration: none;
+}
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+mark{
+    background-color: transparent;
+}
+
+html
+{
+    height: 100%; 
+    font-size: 0.938vw; 
+    @media (max-width:1366px) {
+        font-size: 1.318vw;
+    }
+    @media (max-width:767px) {
+        font-size: 1.8vw;
+    }
+    @media (max-width:767px) {
+        font-size: 2.2vw;
+    }
+    @media (max-width:520px) {
+        font-size: 3vw;
+    }
+    
+}
+body{
+    height: 100%;
+    font-family: 'Lato';
+    font-weight: normal;
+    color: $base;
+    background: $bodyBg;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+
