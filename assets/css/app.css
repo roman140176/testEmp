@@ -3524,6 +3524,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
     font-size: 1.5vw;
   }
 
+  .select__drop {
+    font-size: 1.667vw;
+    line-height: 2.833vw;
+    height: 14.167vw;
+  }
+
   .file-input::before {
     width: 1.5vw;
     height: 1.8vw;
@@ -3566,6 +3572,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
 
   .steps__name {
     font-size: 1.4vw;
+  }
+
+  .select__drop {
+    font-size: 2.018vw;
+    line-height: 3.431vw;
+    height: 17.154vw;
   }
 
   .header__menu {
@@ -3954,6 +3966,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
   .select {
     height: 9.231vw;
     font-size: 3vw;
+  }
+
+  .select__drop {
+    font-size: 3.846vw;
+    line-height: 6.538vw;
+    height: 32.692vw;
   }
 
   .file-input::before {
