@@ -362,16 +362,16 @@
 
 .select__close {
   top: 50%;
-  right: 0.521vw;
+  right: 10px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 1.042vw;
-  height: 1.042vw;
+  width: 20px;
+  height: 20px;
   background-image: url("../svg/check.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 0.469vw 0.313vw;
+  background-size: 9px 6px;
 }
 
 .select__drop {
@@ -3405,6 +3405,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
   .select {
     height: 3vw;
     font-size: 1vw;
+  }
+
+  .select__close {
+    right: 5px;
   }
 
   html {
