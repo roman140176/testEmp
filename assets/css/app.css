@@ -3309,6 +3309,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
     min-width: 2.083vw;
   }
 
+  .select__close {
+    width: 1.042vw;
+    height: 1.042vw;
+    background-size: 0.469vw 0.313vw;
+    right: 0.521vw;
+  }
+
   .header__logo svg {
     min-width: 12.76vw;
     min-height: 1.094vw;
